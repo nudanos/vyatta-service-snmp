@@ -1,17 +1,20 @@
 Source: vyatta-service-snmp
-Section: contrib/net
+Section: net
 Priority: optional
-Maintainer: Vyatta Package Maintainers <DL-vyatta-help@att.com>
-Build-Depends: cpio,
-    debhelper (>= 9.20160709),
-    dh-yang,
-    libreadonly-perl,
-    libfile-slurp-perl,
-    libjson-perl,
-    libjson-xs-perl,
-    libsnmp-extension-passpersist-perl,
-    libsnmp-dev,
-Standards-Version: 3.9.6
+Maintainer: NuDanOS Maintainers <jon@fernandez.tech>
+Build-Depends: debhelper-compat (= 13),
+ cpio,
+ dh-yang,
+ libreadonly-perl,
+ libfile-slurp-perl,
+ libjson-perl,
+ libjson-xs-perl,
+ libsnmp-extension-passpersist-perl,
+ libsnmp-dev
+Standards-Version: 4.7.2
+Rules-Requires-Root: no
+Vcs-Git: https://github.com/nudanos/vyatta-service-snmp.git
+Vcs-Browser: https://github.com/nudanos/vyatta-service-snmp
 
 Package: vyatta-omrfc5676
 Architecture: any
@@ -51,7 +54,7 @@ Package: libsnmp-vyatta-perl
 Architecture: any
 Breaks: vyatta-service-snmp (<< 0.42)
 Replaces: vyatta-service-snmp (<< 0.42)
-Depends:
+Depends: 
  libsnmp-perl,
  libvyatta-cfgclient-perl,
  ${perl:Depends},

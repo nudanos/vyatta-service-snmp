@@ -1,3 +1,9 @@
+vyatta-service-snmp (0.55) trixie; urgency=medium
+
+  * Port to Debian 13 (trixie): debhelper-compat 13, Standards-Version 4.7.2, Rules-Requires-Root, NuDanOS Vcs.
+
+ -- NuDanOS Maintainers <jon@fernandez.tech>  Mon, 28 Sep 2026 23:09:21 -0700
+
 vyatta-service-snmp (0.54) unstable; urgency=medium
 
   * Remove the RDID output from snmp show command
